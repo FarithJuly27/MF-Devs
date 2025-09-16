@@ -1,6 +1,36 @@
 import { Mail, Linkedin, Github, Send } from "lucide-react";
+import { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 
 export default function Contact() {
+  const form = useRef<HTMLFormElement>(null);
+  const [status, setStatus] = useState("");
+
+
+  const sendEmail = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!form.current) return;
+
+
+
+    emailjs
+      .sendForm(
+        import.meta.env.EMAIL_SERVICE_ID,
+        import.meta.env.EMAIL_TEMPLATE_ID,
+        form.current!,
+        import.meta.env.EMAIL_PUBLIC_KEY
+      )
+      .then(
+        () => {
+          setStatus("Message sent successfully!");
+          form.current?.reset();
+        },
+        () => setStatus("Failed to send message. Try again later.")
+      );
+  }
+
+
+
   return (
     <section id="contact" className="w-full py-20 px-6 bg-gradient-to-r from-indigo-50 to-purple-50 dark:from-zinc-900 dark:to-zinc-800">
       <div className="max-w-5xl mx-auto text-center">
@@ -56,7 +86,7 @@ export default function Contact() {
         </div>
 
         {/* Contact Form */}
-        <form className="max-w-2xl mx-auto bg-white dark:bg-zinc-900 shadow-lg rounded-2xl p-8 flex flex-col gap-4">
+        {/* <form className="max-w-2xl mx-auto bg-white dark:bg-zinc-900 shadow-lg rounded-2xl p-8 flex flex-col gap-4">
           <input
             type="text"
             placeholder="Your Name"
@@ -78,7 +108,42 @@ export default function Contact() {
           >
             <Send size={18} /> Send Message
           </button>
+        </form> */}
+        <form
+          ref={form}
+          onSubmit={sendEmail}
+          className="max-w-2xl mx-auto bg-white dark:bg-zinc-900 shadow-lg rounded-2xl p-8 flex flex-col gap-4"
+        >
+          <input
+            type="text"
+            name="name"
+            placeholder="Your Name"
+            className="p-3 border border-gray-300 dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:outline-none"
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Your Email"
+            className="p-3 border border-gray-300 dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:outline-none"
+            required
+          />
+          <textarea
+            name="message"
+            placeholder="Your Message"
+            rows={4}
+            className="p-3 border border-gray-300 dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:outline-none"
+            required
+          ></textarea>
+          <button
+            type="submit"
+            className="flex items-center justify-center gap-2 bg-indigo-600 text-white py-3 rounded-xl font-semibold hover:bg-indigo-700 transition"
+          >
+            <Send size={18} /> Send Message
+          </button>
+          {status && <p className="mt-2 text-center">{status}</p>}
         </form>
+
       </div>
     </section>
   );

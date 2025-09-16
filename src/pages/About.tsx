@@ -11,7 +11,7 @@ export default function About() {
             src="https://i.postimg.cc/3xLT7vVm/Gemini-Generated-Image-t5ye0jt5ye0jt5ye.png"
             alt="Fayaz Ahamed"
             style={{ objectPosition: "center 0%" }}
-            className="w-56 h-56 object-cover object-top rounded-full mb-6 shadow-lg transform hover:scale-105 transition"
+            className="w-42 h-42 object-cover object-top rounded-full mb-6 shadow-lg transform hover:scale-105 transition"
           />
           <h3 className="text-2xl font-bold mb-2">Fayaz Ahamed</h3>
           <p className="text-indigo-600 dark:text-indigo-400 font-medium mb-4">
@@ -29,7 +29,7 @@ export default function About() {
             src="https://i.postimg.cc/L8WbNBGC/Gemini-Generated-Image-jf7g4zjf7g4zjf7g.png"
             alt="Mohamed Sheik Parithu"
             style={{ objectPosition: "center 20%" }}
-            className="w-56 h-56 object-cover object-top rounded-full mb-6 shadow-lg transform hover:scale-105 transition"
+            className="w-42 h-42 object-cover object-top rounded-full mb-6 shadow-lg transform hover:scale-105 transition"
           />
 
 
