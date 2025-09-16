@@ -16,7 +16,7 @@ export default function Contact() {
             <h3 className="font-semibold mb-2">Email</h3>
             <p className="text-gray-700 dark:text-gray-300">
               <a href="mailto:sheikparithu.rahumathulla@gmail.com" className="hover:underline">sheikparithu.rahumathulla@gmail.com</a><br />
-              <a href="mailto:fayaz@123.com" className="hover:underline">fayaz@123.com</a>
+              <a href="mailto:fayazahmd111@gmail.com" className="hover:underline">fayazahmd111@gmail.com</a>
             </p>
           </div>
 
