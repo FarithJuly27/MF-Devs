@@ -12,7 +12,7 @@ export default function Home() {
         transition={{ duration: 1.5 }}
         style={{ zIndex: -1 }}
       />
-
+      
       {/* Headline */}
       <motion.h1
         initial={{ opacity: 0, y: -30 }}
