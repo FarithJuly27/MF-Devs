@@ -9,22 +9,22 @@ import Contact from "./pages/Contact";
 
 export default function App() {
   return (
-    <div className="bg-background text-foreground scroll-smooth w-full">
+    <div className="bg-background text-foreground scroll-smooth w-[100%]">
       <Navbar />
       <main className=" w-[100%]">
-        <section id="home" className="w-full">
+        <section id="home" className="w-[100%]">
           <Home />
         </section>
-        <section id="about" className="w-full">
+        <section id="about" className="w-[100%]">
           <About />
         </section>
-        <section id="skills" className="w-full">
+        <section id="skills" className="w-[100%]">
           <Skills />
         </section>
-        <section id="projects" className="w-full">
+        <section id="projects" className="w-[100%]">
           <Projects />
         </section>
-        <section id="contact" className="w-full">
+        <section id="contact" className="w-[100%]">
           <Contact />
         </section>
       </main>

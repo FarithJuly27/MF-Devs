@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
-import { ArrowDown } from "lucide-react";
+import { ArrowDown, Code2, Monitor, Rocket, Users } from "lucide-react";
 
 export default function Home() {
   return (
-    <section className="relative flex flex-col justify-center items-center text-center min-h-screen w-screen overflow-hidden bg-gradient-to-b from-white to-gray-100 dark:from-zinc-900 dark:to-zinc-950">
-      {/* Subtle gradient background */}
+    <section className="relative flex flex-col justify-center items-center text-center min-h-screen w-screen  bg-gradient-to-b from-white to-gray-100 dark:from-zinc-900 dark:to-zinc-950">
+      {/* Background Gradient */}
       <motion.div
         className="absolute inset-0 bg-gradient-to-tr from-indigo-50 via-transparent to-indigo-100 dark:from-indigo-900/20 dark:via-transparent dark:to-indigo-800/10"
         initial={{ opacity: 0 }}
@@ -12,15 +12,15 @@ export default function Home() {
         transition={{ duration: 1.5 }}
         style={{ zIndex: -1 }}
       />
-      
+
       {/* Headline */}
       <motion.h1
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.2 }}
-        className="text-4xl md:text-6xl font-extrabold text-gray-900 dark:text-white leading-tight max-w-3xl"
+        className="text-xl md:text-6xl font-extrabold text-gray-900 dark:text-white leading-tight max-w-3xl mt-15 md:mt-0 px-2"
       >
-        Fayaz Ahamed  <br className="hidden md:block" /> & Mohamed Sheik Parithu
+        Fayaz Ahamed & <br className="hidden md:block" /> Mohamed Sheik Parithu
       </motion.h1>
 
       {/* Subtitle */}
@@ -28,25 +28,48 @@ export default function Home() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.6 }}
-        className="mt-4 text-xl md:text-2xl text-gray-700 dark:text-gray-200 font-medium max-w-2xl"
+        className="mt-4 text-xl md:text-2xl text-gray-700 dark:text-gray-200 font-medium max-w-2xl px-2"
       >
         Full-Stack MERN Developers · Building Scalable & Modern Web Apps
       </motion.p>
 
-      {/* Supporting line */}
-      <motion.p
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.9 }}
-        className="mt-3 text-base md:text-lg text-gray-600 dark:text-gray-400 max-w-xl"
+      {/* Features */}
+      <motion.div
+        initial="hidden"
+        animate="visible"
+        variants={{
+          hidden: {},
+          visible: { transition: { staggerChildren: 0.2 } },
+        }}
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12 max-w-6xl"
       >
-        We help businesses transform ideas into user-friendly digital products 
-        with 2+ years of professional development experience.
-      </motion.p>
+        {[
+          { icon: <Code2 size={32} />, title: "Clean Code", desc: "High-quality, maintainable, and scalable solutions." },
+          { icon: <Monitor size={32} />, title: "Responsive Design", desc: "Seamless experiences across devices." },
+          { icon: <Rocket size={32} />, title: "Performance", desc: "Fast-loading apps optimized for growth." },
+          { icon: <Users size={32} />, title: "Collaboration", desc: "Strong teamwork & client-focused delivery." },
+        ].map((feature, index) => (
+          <motion.div
+            key={index}
+            variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
+            className="flex flex-col items-center text-center p-6 rounded-xl bg-white/70 dark:bg-zinc-800/50 shadow-md hover:shadow-lg transition"
+          >
+            <div className="text-indigo-600 dark:text-indigo-400 mb-4">
+              {feature.icon}
+            </div>
+            <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+              {feature.title}
+            </h3>
+            <p className="text-gray-600 dark:text-gray-300 mt-2 text-sm">
+              {feature.desc}
+            </p>
+          </motion.div>
+        ))}
+      </motion.div>
 
       {/* CTA Buttons */}
       <motion.div
-        className="mt-10 flex flex-col md:flex-row justify-center gap-6"
+        className="mt-12 flex flex-col md:flex-row justify-center gap-6"
         initial="hidden"
         animate="visible"
         variants={{
