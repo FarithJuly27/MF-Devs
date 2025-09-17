@@ -3,7 +3,7 @@ import { ArrowDown, Code2, Monitor, Rocket, Users } from "lucide-react";
 
 export default function Home() {
   return (
-    <section className="relative flex flex-col justify-center items-center text-center min-h-screen w-screen  bg-gradient-to-b from-white to-gray-100 dark:from-zinc-900 dark:to-zinc-950">
+    <section className="relative flex flex-col justify-center items-center text-center md:min-h-screen w-screen  bg-gradient-to-b from-white to-gray-100 dark:from-zinc-900 dark:to-zinc-950">
       {/* Background Gradient */}
       <motion.div
         className="absolute inset-0 bg-gradient-to-tr from-indigo-50 via-transparent to-indigo-100 dark:from-indigo-900/20 dark:via-transparent dark:to-indigo-800/10"
@@ -14,21 +14,21 @@ export default function Home() {
       />
 
       {/* Headline */}
-      <motion.h1
+      <motion.h4
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.2 }}
-        className="text-xl md:text-6xl font-extrabold text-gray-900 dark:text-white leading-tight max-w-3xl mt-15 md:mt-0 px-2"
+        className="text-3xl md:text-6xl font-extrabold text-gray-900 dark:text-white leading-tight max-w-3xl mt-15 md:mt-0 px-2"
       >
         Fayaz Ahamed & <br className="hidden md:block" /> Mohamed Sheik Parithu
-      </motion.h1>
+      </motion.h4>
 
       {/* Subtitle */}
       <motion.p
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.6 }}
-        className="mt-4 text-xl md:text-2xl text-gray-700 dark:text-gray-200 font-medium max-w-2xl px-2"
+        className="mt-4 text-lg md:text-2xl text-gray-700 dark:text-gray-200 font-medium max-w-2xl px-2"
       >
         Full-Stack MERN Developers · Building Scalable & Modern Web Apps
       </motion.p>
