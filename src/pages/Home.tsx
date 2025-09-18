@@ -3,7 +3,7 @@ import { ArrowDown, Code2, Monitor, Rocket, Users } from "lucide-react";
 
 export default function Home() {
   return (
-    <section className="relative flex flex-col justify-center items-center text-center md:min-h-screen w-screen  bg-gradient-to-b from-white to-gray-100 dark:from-zinc-900 dark:to-zinc-950">
+    <section className="relative flex flex-col justify-center items-center text-center sm:min-h-screen md:max-h-72 w-screen  bg-gradient-to-b from-white to-gray-100 dark:from-zinc-900 dark:to-zinc-950">
       {/* Background Gradient */}
       <motion.div
         className="absolute inset-0 bg-gradient-to-tr from-indigo-50 via-transparent to-indigo-100 dark:from-indigo-900/20 dark:via-transparent dark:to-indigo-800/10"
@@ -41,7 +41,7 @@ export default function Home() {
           hidden: {},
           visible: { transition: { staggerChildren: 0.2 } },
         }}
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12 max-w-6xl"
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12 max-w-6xl m-2 mx-4 sm:mx-2"
       >
         {[
           { icon: <Code2 size={32} />, title: "Clean Code", desc: "High-quality, maintainable, and scalable solutions." },
@@ -100,7 +100,7 @@ export default function Home() {
         animate={{ y: [0, 8, 0] }}
         transition={{ repeat: Infinity, duration: 1.5 }}
       >
-        <ArrowDown size={22} />
+      <ArrowDown size={22} />
         <span className="text-sm mt-1">Scroll</span>
       </motion.div>
     </section>
