@@ -1,20 +1,23 @@
+import expenseTrackerimage from '../assets/expense tracker.png'
+import portfolioImage from '../assets/portfolio.png'
+
 export const projects = [
-  {
-    title: "E-commerce Web App",
-    desc: "Full-featured MERN e-commerce app with authentication, cart, and payment integration.",
-    github: "#",
-    live: "#",
-  },
-  {
-    title: "Project Management Tool",
-    desc: "A Trello-like project management app built with React, Node, and MongoDB.",
-    github: "#",
-    live: "#",
+    {
+    title: "Expense Tracker App",
+    desc: "A full-stack MERN expense tracker to manage personal finances with charts, summaries, and backend data storage.",
+    github: "https://github.com/yourusername/expense-tracker",
+    live: "https://group-investmate001.vercel.app/",
+    tech: ["React", "Node.js", "Express", "MongoDB", "Tailwind", "Chart.js"],
+    image: expenseTrackerimage, 
   },
   {
     title: "Portfolio Website",
     desc: "This very portfolio built with Vite, React, Tailwind, and shadcn.",
     github: "#",
     live: "#",
+    tech: ["React", "Vite", "Tailwind", "shadcn"],
+    image: portfolioImage,
   },
+ 
 ];
+

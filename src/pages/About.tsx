@@ -15,12 +15,12 @@ export default function About() {
           />
           <h3 className="text-xl md:text-2xl font-bold mb-2">Fayaz Ahamed</h3>
           <p className="text-indigo-600 dark:text-indigo-400 font-medium mb-4 text-sm md:text-base">
-            Full-Stack MERN Developer
+            Backend-Focused MERN Developer
           </p>
           <p className="text-gray-600 dark:text-gray-300 text-sm md:text-base leading-relaxed">
-            Experienced in developing modern web solutions from e-commerce apps
-            to dashboards. Focused on writing efficient code and delivering
-            seamless user experiences.
+            Strong in backend development with Node.js, Express, and MongoDB, and skilled in relational
+            databases like MySQL. Specialized in building robust APIs, database design, and scalable
+            server-side solutions for modern applications.
           </p>
         </div>
 
@@ -33,12 +33,12 @@ export default function About() {
           />
           <h3 className="text-xl md:text-2xl font-bold mb-2">Mohamed Sheik Parithu</h3>
           <p className="text-indigo-600 dark:text-indigo-400 font-medium mb-4 text-sm md:text-base">
-            Full-Stack MERN Developer
+            Frontend-Focused MERN Developer
           </p>
           <p className="text-gray-600 dark:text-gray-300 text-sm md:text-base leading-relaxed">
-            Passionate about crafting clean, scalable applications with React,
-            Node.js, Express, and MongoDB. Specialized in building user-friendly
-            interfaces and robust backend systems.
+            Specialized in crafting clean and user-friendly UIs with React and Next.js. Focused
+            on building modern, responsive, and performance-optimized frontends that deliver seamless
+            experiences across devices.
           </p>
         </div>
       </div>

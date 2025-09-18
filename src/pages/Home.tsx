@@ -18,7 +18,7 @@ export default function Home() {
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.2 }}
-        className="text-3xl md:text-6xl font-extrabold text-gray-900 dark:text-white leading-tight max-w-3xl mt-15 md:mt-0 px-2"
+        className="text-3xl md:text-6xl font-extrabold text-gray-900 dark:text-white leading-tight max-w-3xl mt-15 md:mt-0 pt-10 px-2"
       >
         Fayaz Ahamed & <br className="hidden md:block" /> Mohamed Sheik Parithu
       </motion.h4>
