@@ -53,14 +53,14 @@ export default function Projects() {
 
             {/* Links */}
             <div className="mt-4 flex flex-wrap gap-4">
-              <a
+              {/* <a
                 href={project.github}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-indigo-600 hover:text-indigo-500 underline text-sm md:text-base"
               >
                 GitHub
-              </a>
+              </a> */}
               <a
                 href={project.live}
                 target="_blank"
